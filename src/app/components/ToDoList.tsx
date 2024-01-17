@@ -23,7 +23,7 @@ const ToDoList = () => {
     })
     return (
         <ul>
-            <li className='my-2 text-sm font-semibold'>View your notes...</li>
+            <li className='my-2 text-sm font-semibold'>{filteredToDos.length ? 'View your notes...' : ''}</li>
             {filteredToDos.map((todo: IToDo, index: number) => {
                 return (
                     <Fragment key={index}>

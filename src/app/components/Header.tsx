@@ -1,22 +1,11 @@
 'use-client';
 
-import classNames from "classnames";
+import ToggleTheme from "./ToggleTheme";
 
 const TopBar = () => {
-    const styling = classNames(
-        'flex',
-        'justify-end',
-        'items-center',
-        'border-b-1',
-        'border-color-blue-500',
-        'h-16',
-        'p-6'
-    );
 
-    return <header className={styling}>
-        <button>
-            this
-        </button>
+    return <header className='flex justify-end items-center border-b-1 border-b-dark-600 shadow-md h-32 md:h-16 p-8'>
+        <ToggleTheme />
     </header>
 }
 

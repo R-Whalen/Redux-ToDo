@@ -1,6 +1,7 @@
+'use-client';
+
 import type { Metadata } from 'next'
 import './globals.css'
-import { ThemeProvider } from ""
 
 export const metadata: Metadata = {
   title: 'Redux-ToDo',
@@ -15,14 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )

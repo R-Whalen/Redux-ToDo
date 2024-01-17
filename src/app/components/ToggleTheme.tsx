@@ -21,7 +21,7 @@ const ToggleTheme = () => {
         'dark:bg-mixed-200',
         'rounded-full',
         'transform',
-        theme === 'light' ? 'translate-x-0' : 'translate-x-5',
+        theme === 'dark' ? 'translate-x-5' : 'translate-x-0',
         'transition-transform',
         'duration-500',
         'ease-in-out'
@@ -29,13 +29,13 @@ const ToggleTheme = () => {
 
     return (
         <div
-            className='relative w-14 h-8 rounded-full p-1 cursor-pointer bg-white dark:bg-mixed-200 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)]'
+            className='relative w-14 h-8 rounded-full p-1 text-black dark:text-white cursor-pointer bg-white dark:bg-mixed-200 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)] scale-2'
             onClick={toggleTheme}
         >
             <button className={button}>
-                {theme === 'light'
-                    ? <FontAwesomeIcon icon={faSun} style={{ color: 'black', height: '1.25rem' }} />
-                    : <FontAwesomeIcon icon={faMoon} style={{ color: 'white', height: '1.25rem' }} />
+                {theme === 'dark'
+                    ? <FontAwesomeIcon icon={faMoon} style={{ height: '1rem' }} />
+                    : <FontAwesomeIcon icon={faSun} style={{ height: '1rem' }} />
                 }
             </button>
         </div>

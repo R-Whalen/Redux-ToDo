@@ -18,7 +18,7 @@ const Filter = () => {
                 value={currentFilter}
                 onChange={(e) => handleFilter(e.target.value)}
             >
-                <option value="ALL">Default</option>
+                <option value="ALL">All</option>
                 <option value="COMPLETED">Completed</option>
                 <option value="INCOMPLETE">Incomplete</option>
             </select>

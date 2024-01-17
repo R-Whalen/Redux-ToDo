@@ -1,7 +1,7 @@
 'use-client';
 
 import { Fragment } from "react";
-import { useSelector } from "react-redux";
+import { shallowEqual, useSelector } from "react-redux";
 import ToDoItem from "./ToDoItem";
 import { IState, IToDo } from "@/types";
 
@@ -20,7 +20,8 @@ const ToDoList = () => {
 
             return matchesFilter && matchesSearch;
         })
-    })
+    }, shallowEqual)
+
     return (
         <ul>
             <li className='my-2 text-sm font-semibold'>{filteredToDos.length ? 'View your notes...' : ''}</li>

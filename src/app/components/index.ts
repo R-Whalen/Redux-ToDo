@@ -1,9 +1,9 @@
 import Header from './Header';
 import Footer from './Footer';
-import ToDoList from './ToDoList';
+import ToDo from './ToDo';
 
 export {
     Header,
     Footer,
-    ToDoList
+    ToDo,
 }

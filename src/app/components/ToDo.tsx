@@ -36,7 +36,7 @@ const ToDo = () => {
                 <div className='flex items-center mb-4'>
                     <input
                         id='addToDoInput'
-                        className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500'
+                        className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-primary-200 dark:focus:border-primary-400'
                         type='text'
                         placeholder='Add ToDo'
                         value={newToDoText}
@@ -47,7 +47,7 @@ const ToDo = () => {
                         }}
                     />
                     <button
-                        className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none'
+                        className='ml-4 p-2 bg-primary-200 dark:bg-primary-400 text-white rounded hover:bg-primary-200 dark:hover:bg-primary-400 focus:outline-none'
                         onClick={handleAddTodoClick}
                     >
                         <FontAwesomeIcon icon={faPlus} />
@@ -57,13 +57,13 @@ const ToDo = () => {
                     <Filter />
                     <div className='flex items-center'>
                         <input
-                            className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500'
+                            className='flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-primary-200 dark:focus:border-primary-400'
                             type='text'
                             placeholder='Search Todos'
                             value={search}
                             onChange={(e) => handleSearchChange(e.target.value)}
                         />
-                        <button className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none'>
+                        <button className='ml-4 p-2 bg-primary-200 dark:bg-primary-400 text-white rounded hover:border-primary-200 dark:hover:border-primary-400 focus:outline-none'>
                             <FontAwesomeIcon icon={faSearch} />
                         </button>
                     </div>

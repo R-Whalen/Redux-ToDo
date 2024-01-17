@@ -41,6 +41,10 @@ const ToDo = () => {
                         placeholder='Add ToDo'
                         value={newToDoText}
                         onChange={(e) => setNewToDoText(e.target.value)}
+                        onKeyDown={({ key }) => {
+                            if (key === 'Enter')
+                                handleAddTodoClick()
+                        }}
                     />
                     <button
                         className='ml-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none'
